@@ -1,0 +1,39 @@
+{
+  "name": "@rav2040/dotenv",
+  "version": "1.0.0",
+  "description": ".env loader with extended feature set.",
+  "author": "Stuart Kennedy",
+  "license": "MIT",
+  "homepage": "https://github.com/rav2040/dotenv#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rav2040/dotenv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rav2040/dotenv/issues"
+  },
+  "keywords": [
+    "env",
+    "dotenv",
+    "typescript"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "ts-node ./tests/index.test.ts",
+    "test:unit": "c8 --all yarn test",
+    "test:ci": "tsc --noEmit && c8 --all --reporter=lcov yarn test",
+    "build": "rm -rf ./lib && tsc -b",
+    "prepublishOnly": "yarn test:ci && yarn build"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "c8": "^7.12.0",
+    "eslint": "^8.25.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}
