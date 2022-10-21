@@ -2,10 +2,10 @@
 
 A non-mutating Node.js library for loading environment variables with TypeScript support.
 
-![build](https://img.shields.io/github/workflow/status/rav2040/dotenv/unit-tests?style=for-the-badge&logo=github)
-![coverage](https://img.shields.io/coveralls/github/rav2040/dotenv?style=for-the-badge&logo=coveralls)
-![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/rav2040/dotenv?style=for-the-badge&logo=snyk)
-![npm](https://img.shields.io/npm/v/@rav2040/dotenv?style=for-the-badge&logo=npm)
+[![build](https://img.shields.io/github/workflow/status/rav2040/dotenv/unit-tests?style=for-the-badge&logo=github)](https://github.com/rav2040/dotenv/actions/workflows/unit-tests.yml)
+[![coverage](https://img.shields.io/coveralls/github/rav2040/dotenv?style=for-the-badge&logo=coveralls)](https://coveralls.io/github/rav2040/dotenv)
+[![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/rav2040/dotenv?style=for-the-badge&logo=snyk)](https://security.snyk.io/package/npm/@rav2040%2Fdotenv)
+[![npm](https://img.shields.io/npm/v/@rav2040/dotenv?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@rav2040/dotenv)
 
 ## Installation
 
