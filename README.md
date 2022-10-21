@@ -2,10 +2,10 @@
 
 A non-mutating Node.js library for loading environment variables with TypeScript support.
 
-![build](https://img.shields.io/github/workflow/status/rav2040/dotenv/unit-tests?style=for-the-badge)
-![coverage](https://img.shields.io/coveralls/github/rav2040/dotenv?style=for-the-badge)
-![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/rav2040/dotenv?style=for-the-badge)
-![npm](https://img.shields.io/npm/v/@rav2040/dotenv?style=for-the-badge)
+![build](https://img.shields.io/github/workflow/status/rav2040/dotenv/unit-tests?style=for-the-badge&logo=github)
+![coverage](https://img.shields.io/coveralls/github/rav2040/dotenv?style=for-the-badge&logo=coveralls)
+![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/rav2040/dotenv?style=for-the-badge&logo=snyk)
+![npm](https://img.shields.io/npm/v/@rav2040/dotenv?style=for-the-badge&logo=npm)
 
 ## Installation
 
