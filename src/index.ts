@@ -9,9 +9,10 @@ export type EnvironmentConfig = {
   path?: string;
   encoding?: BufferEncoding;
   override?: boolean;
+  parseJson?: boolean;
 };
 
-export function createEnv({ path, encoding = "utf8", override = false }: EnvironmentConfig = {}) {
+export function createEnv({ path, encoding = "utf8", override = false, parseJson = true }: EnvironmentConfig = {}) {
   const defaultPath = resolve(process.cwd(), DEFAULT_ENV_PATH);
   const skipReadFile = path === undefined && !existsSync(defaultPath);
 
@@ -47,7 +48,7 @@ export function createEnv({ path, encoding = "utf8", override = false }: Environ
         throw Error(`Environment variable '${name}' is required but not set.`);
       }
 
-      return value !== undefined ? tryParseJson<T>(value) : value;
+      return parseJson && value !== undefined ? tryParseJson<T>(value) : value;
     }
   };
 }

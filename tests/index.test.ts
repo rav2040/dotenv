@@ -63,3 +63,24 @@ const TEST_ENV = resolve(process.cwd(), "./tests/mocks/.test.env");
   const testProperty = Env.get("NODE_ENV");
   assert.equal(testProperty, "test");
 }
+
+// Valid JSON string is parsed as JSON.
+{
+  const Env = createEnv({ path: TEST_ENV });
+  const testProperty = Env.get("TEST_PROPERTY_JSON");
+  assert.equal(typeof testProperty, "object");
+}
+
+// Invalid JSON string is left as a string.
+{
+  const Env = createEnv({ path: TEST_ENV });
+  const testProperty = Env.get("TEST_PROPERTY_INVALID_JSON");
+  assert.equal(typeof testProperty, "string");
+}
+
+// Valid JSON string is left as a string when `parseJson` is set to false.
+{
+  const Env = createEnv({ path: TEST_ENV, parseJson: false });
+  const testProperty = Env.get("TEST_PROPERTY_JSON");
+  assert.equal(typeof testProperty, "string");
+}
