@@ -20,8 +20,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "ts-node ./tests/index.test.ts",
-    "test:unit": "c8 --all yarn test",
+    "test": "NODE_ENV=development ts-node ./tests/index.test.ts",
+    "test:unit": "c8 yarn test",
     "test:ci": "tsc --noEmit && c8 --all --reporter=lcov yarn test",
     "build": "rm -rf ./lib && tsc -b",
     "prepublishOnly": "yarn test:ci && yarn build"
