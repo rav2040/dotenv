@@ -78,3 +78,7 @@ Variables set in the environment file will take precedence over existing environ
 ### `parseJson?: boolean`
 
 Values that are valid JSON will be deserialized. Defaults to `true`.
+
+## License
+
+[MIT](https://github.com/rav2040/dotenv/blob/master/LICENSE)
