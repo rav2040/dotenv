@@ -46,7 +46,7 @@ const baz = Env.get("BAZ", true); // Throws an error
 
 Returned values will be parsed as JSON by default.
 
-e.g. `FOO` is set to the `42`:
+e.g. `FOO` is set to `42`:
 
 ```ts
 const foo = Env.get<number>("FOO"); // 42
