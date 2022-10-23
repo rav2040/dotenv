@@ -25,7 +25,7 @@ export function createEnv({ path, encoding = "utf8", override = false, parseJson
       const [key, ...valueArr] = line.split("=");
       return <const>[key.trim(), valueArr.join("=").trim()];
     })
-    .map(([key, value]) => [
+    .map<[string, string | undefined]>(([key, value]) => [
       key,
       (value.at(0)?.match(QUOTATION_MARK) && value.at(-1)?.match(QUOTATION_MARK) ? value.slice(1, -1) : value) ||
         undefined,
