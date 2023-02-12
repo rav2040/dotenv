@@ -1,6 +1,6 @@
 {
   "name": "@rav2040/dotenv",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": ".env loader with extended feature set.",
   "author": "Stuart Kennedy",
   "license": "MIT",
@@ -22,7 +22,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "NODE_ENV=development ts-node-esm ./tests/index.test.ts",
-    "test:unit": "c8 yarn test",
+    "test:unit": "c8 --include src yarn test",
     "test:ci": "tsc --noEmit && c8 --reporter=lcov yarn test",
     "build": "rm -rf ./lib && tsc -b",
     "prepublishOnly": "yarn test:ci && yarn build"
