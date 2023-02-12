@@ -23,7 +23,7 @@ export function createEnv({ path, encoding = "utf8", override = false, parseJson
     .filter(Boolean)
     .map((line) => {
       const [key, ...valueArr] = line.split("=");
-      return <const>[key.trim(), valueArr.join("=").trim()];
+      return [key.trim(), valueArr.join("=").trim()];
     })
     .map<[string, string | undefined]>(([key, value]) => [
       key,
@@ -55,7 +55,8 @@ export function createEnv({ path, encoding = "utf8", override = false, parseJson
 
 function tryParseJson<T>(str: string) {
   try {
-    return <T>JSON.parse(str);
+    const parsedJson: T = JSON.parse(str);
+    return parsedJson;
   } catch {
     return str;
   }

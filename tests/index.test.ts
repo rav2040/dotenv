@@ -1,7 +1,7 @@
 import assert from "assert/strict";
-import { writeFileSync, unlinkSync } from "fs";
+import { writeFileSync, unlinkSync } from "node:fs";
 import { resolve } from "node:path";
-import { createEnv } from "../src";
+import { createEnv } from "../src/index.js";
 
 const TEST_ENV = resolve(process.cwd(), "./tests/mocks/.test.env");
 
